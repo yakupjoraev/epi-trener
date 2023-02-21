@@ -1,0 +1,40 @@
+// Footer
+.footer {
+  padding: 45px 0;
+
+  // .footer__copys
+
+  &__copys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+  }
+
+  // .footer__copy
+
+  &__copy {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--white-color);
+  }
+
+  // .footer__political
+
+  &__political {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--white-color);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.container {}

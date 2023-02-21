@@ -1,0 +1,78 @@
+.philosophy {
+  padding: 120px 0;
+
+  @media (max-width: $breakpoint992) {
+    padding: 80px 0;
+  }
+
+  // .philosophy__inner
+
+  &__inner {
+    position: relative;
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // .philosophy__img
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: -150px;
+
+    @media (max-width:1200px) {
+      width: 500px;
+      top: 10%;
+      left: -10%;
+    }
+
+    @media (max-width: $breakpoint992) {
+      position: static;
+    }
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+
+  // .philosophy__info
+
+  &__info {
+    flex: 0 1 545px;
+    margin-left: auto;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+      width: 100%;
+    }
+  }
+
+  // .philosophy__title
+
+  &__title {}
+
+  // .philosophy__texts
+
+  &__texts {}
+
+  // .philosophy__text
+
+  &__text {
+
+    span {
+      color: var(--yellow-color);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @media (max-width: $breakpoint768) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

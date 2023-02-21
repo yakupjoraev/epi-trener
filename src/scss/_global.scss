@@ -1,0 +1,92 @@
+// Container
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint1450) {
+    // max-width: 1200px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    // max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    // max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    // max-width: none;
+  }
+}
+
+// Body Locked
+body {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--white-color);
+  background-color: var(--bg-color);
+
+  &.locked {
+    overflow: hidden;
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+.main__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+main {
+  flex: 1 1 auto;
+  min-height: 100%;
+}
+
+.main-title {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 62px;
+  color: var(--white-color);
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 30px;
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+}
+
+// Animations
+
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
