@@ -343,6 +343,64 @@ main {
   margin-bottom: 30px;
 }
 
+.leader {
+  position: relative;
+  padding: 120px 0;
+  background-image: url("../img/we-map.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.leader__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 110px;
+}
+
+.leader__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 572px;
+          flex: 0 1 572px;
+}
+
+.leader__text:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.leader__text--yellow {
+  color: var(--yellow-color);
+}
+
+.leader__footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.leader__view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 65px 60px;
+  background-image: url("../img/calc-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--blue-color);
+  border-radius: 30px;
+}
+
+.leader__footer-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 .footer {
   padding: 45px 0;
 }
@@ -432,6 +490,10 @@ main {
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
     width: 100%;
+  }
+
+  .leader {
+    padding: 80px 0;
   }
 }
 
@@ -607,6 +669,10 @@ main {
   }
 
   .philosophy__text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .leader__text:not(:last-child) {
     margin-bottom: 20px;
   }
 
