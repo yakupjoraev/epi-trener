@@ -5,23 +5,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Регистрация на конкурс
+    “Стать Эпи-тренером”</title>
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="main__body">
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="header">
   <!-- Navbar -->
   <nav class="nav">
     <div class="navbar">
       <div class="logo"> <a href="#"> <img class="logo__img" src="./img/logo.svg" alt=""> </a> </div>
       <ul class="menu">
-        <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Главная</a></li>
-        <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Кто такой Эпи-Тренер</a></li>
-        <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Этапы проведения</a></li>
-        <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Призы за победу</a></li>
-        <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Оставить заявку</a></li>
+        <li class="menu__item"><a href="#header" class="menu__item-link" data-scroll>Главная</a></li>
+        <li class="menu__item"><a href="#leader" class="menu__item-link" data-scroll>Кто такой Эпи-Тренер</a></li>
+        <li class="menu__item"><a href="#stages" class="menu__item-link" data-scroll>Этапы проведения</a></li>
+        <li class="menu__item"><a href="#prizes" class="menu__item-link" data-scroll>Призы за победу</a></li>
+        <li class="menu__item"><a href="#timer" class="menu__item-link" data-scroll>Оставить заявку</a></li>
       </ul>
       <div class="burger">
         <span></span>
@@ -31,7 +39,7 @@
 </header>
 
   <!-- Main Page -->
-  <main>
+  <main class="main">
     <section class="hero">
   <div class="container">
     <div class="hero__inner">
@@ -97,7 +105,7 @@
     </div>
   </div>
 </section>
-    <section class="leader">
+    <section class="leader" id="leader">
   <div class="container">
     <div class="leader__main">
       <div class="leader__info">
@@ -137,11 +145,11 @@
         </a>
 
         <a class="leader__link" href="#">
-          <img class="leader__link-img" src="./img/play.png" alt="play">
+          <div class="leader__link-play"></div>
 
           <div class="leader__link-texts">
-            <p class="leader__link-text"></p>
-            <p class="leader__link-text leader__link-text--yellow"></p>
+            <p class="leader__link-text">Посмотрите видео</p>
+            <p class="leader__link-text leader__link-text--yellow">Кто такой Эпи-тренер</p>
           </div>
         </a>
       </div>
@@ -151,6 +159,266 @@
     </div>
   </div>
 </section>
+    <section class="stages" id="stages">
+  <div class="container">
+    <h3 class="stages__title main-title">
+      Этапы Проведения конкурса
+    </h3>
+
+    <ul class="stages__list">
+      <li class="stages__item">
+        <h4 class="stages__item-title">
+          Оставьте заявку
+        </h4>
+
+        <p class="stages__item-descr">
+          Безусловно, выбранный нами инновационный
+          <span>
+            путь
+          </span>
+          не даёт нам иного выбора, кроме определения вывода текущих активов.
+        </p>
+
+        <img class="stages__item-img" src="./img/sova-s-pismom.png" alt="sova-s-pismom">
+      </li>
+
+      <li class="stages__item">
+        <h4 class="stages__item-title">
+          Пройти обучение
+        </h4>
+
+        <p class="stages__item-descr">
+          Безусловно, выбранный нами инновационный путь не даёт нам иного выбора, кроме определения вывода текущих
+          активов.
+          <span>
+            Кроме
+          </span>
+          определения вывода текущих активов.
+        </p>
+
+        <img class="stages__item-img" src="./img/videoplenka.png" alt="videoplenka">
+      </li>
+
+      <li class="stages__item">
+        <h4 class="stages__item-title">
+          Тестирование
+        </h4>
+
+        <p class="stages__item-descr">
+          Безусловно, выбранный нами инновационный путь не даёт нам иного выбора, кроме определения вывода
+          <span>
+            текущих
+          </span>
+          активов.
+        </p>
+
+        <p class="stages__item-descr">
+          Кроме определения вывода текущих активов.
+        </p>
+
+        <img class="stages__item-img" src="./img/notebook.png" alt="notebook">
+      </li>
+
+      <li class="stages__item">
+        <h4 class="stages__item-title">
+          Выбор победителя
+        </h4>
+
+        <p class="stages__item-descr">
+          Безусловно, выбранный нами инновационный путь не даёт нам
+          <span>
+            иного
+          </span>
+          выбора, кроме определения вывода текущих активов.
+        </p>
+
+        <img class="stages__item-img" src="./img/kubok.png" alt="kubok">
+      </li>
+    </ul>
+  </div>
+</section>
+    <section class="prizes" id="prizes">
+  <div class="container">
+    <div class="prizes__inner">
+      <div class="prizes__info">
+        <h3 class="prizes__title main-title">
+          Призы за участие
+        </h3>
+
+        <div class="prizes__texts">
+          <p class="prizes__text">
+            Эпи-тренер - это мастер, который любит свою работу, для которого эта профессия как продолжение, проявление
+            себя.
+          </p>
+
+          <p class="prizes__text">
+            Эпи-тренер готов давать от избытка, расти, познавать и улучшать свои навыки.
+          </p>
+
+          <p class="prizes__text prizes__text--yellow">
+            Это мастер, который воплощает свои идеи в жизнь.
+          </p>
+
+          <p class="prizes__text">
+            Безусловно, выбранный нами инновационный путь не даёт нам иного выбора, кроме определения вывода текущих
+            активов. В целом, конечно, перспективное планирование играет определяющее значение для форм воздействия.
+          </p>
+        </div>
+      </div>
+
+      <ul class="prizes__list">
+        <li class="prizes__item">
+          <h4 class="prizes__item-title">
+            Эпи-тренер
+          </h4>
+
+          <p class="prizes__item-descr">
+            Колористика
+          </p>
+        </li>
+
+        <li class="prizes__item">
+          <h4 class="prizes__item-title">
+            Эпи-тренер
+          </h4>
+
+          <p class="prizes__item-descr">
+            Стрижка
+          </p>
+        </li>
+
+        <li class="prizes__item">
+          <h4 class="prizes__item-title">
+            Эпи-тренер
+          </h4>
+
+          <p class="prizes__item-descr">
+            Прическа
+          </p>
+        </li>
+
+        <li class="prizes__item">
+          <h4 class="prizes__item-title">
+            Эпи-тренер
+          </h4>
+
+          <p class="prizes__item-descr">
+            Химия
+          </p>
+        </li>
+
+        <li class="prizes__item prizes__item--money">
+          <p class="prizes__item-money">
+            1 000 000 рублей
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="timer" id="timer">
+  <div class="container">
+    <div class="timer__inner">
+      <h3 class="timer__title main-title">Оформить заявку на участие</h3>
+      <p class="timer__descr">Старт приёма заявок через:</p>
+      <div class="timer__countdown" id="countdown">
+        <div class="timer__circle circle" style="--clr: var(--yellow-color);">
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="dd"></circle>
+          </svg>
+          <div class="timer__days" id="days">000<br><span>Дней</span></div>
+        </div>
+
+        <div class="timer__circle circle" style="--clr: var(--yellow-color);">
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="hh"></circle>
+          </svg>
+          <div class="timer__hours" id="hours">00<br><span>часов</span></div>
+        </div>
+
+        <div class="timer__circle circle" style="--clr: var(--yellow-color);">
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="mm"></circle>
+          </svg>
+          <div class="timer__minutes" id="minutes">00<br><span>минут</span></div>
+        </div>
+
+        <div class="timer__circle circle" style="--clr: var(--yellow-color);">
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="ss"></circle>
+          </svg>
+          <div class="timer__secinds" id="seconds">00<br><span>секунд</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- form step 1 -->
+
+<form class="form form-step--one" action="#" id="form">
+  <div class="container">
+    <div class="form__inner">
+      <h5 class="form__title">
+        Оставьте свой номер телефона и мы отправим вам уведомление о старте конкурса
+      </h5>
+
+      <div class="form__group">
+        <input class="form__input" type="tel" placeholder="Введите номер телефона">
+
+        <button type="submit" class="form__btn">Напомнить</button>
+      </div>
+    </div>
+
+    <p class="form__footer-text">
+      А пока вы можете подготовить одноминутное видео-визитку о себе. Инструкция
+      <a class="form__footer-link" href="#">тут</a>
+      . Пример видео визитки можете посмотреть
+      <a class="form__footer-link" href="#">тут</a>
+      .
+    </p>
+  </div>
+
+</form>
+
+<!-- form step 2 -->
+
+<!-- js_error для ошибок. добовлять к input -->
+
+<form class="form form-step--two" action="#">
+  <div class="container">
+    <div class="form__inner">
+      <h5 class="form__title">
+        Введите ваши данные для участия:
+      </h5>
+      <input class="form__input" type="text" placeholder="Ваше ФИО">
+      <input class="form__input" type="tel" placeholder="Введите номер телефона">
+      <input class="form__input" type="email" placeholder="Ваш e-mail">
+      <input class="form__input" type="text" placeholder="Город, район">
+      <input class="form__input" type="text" placeholder="Видео-визитка">
+      <p class="form__text">
+        Инструкция
+        <a class="form__link" href="#">тут</a>
+        . Пример видео визитки можете посмотреть
+        <a class="form__link" href="#">тут</a>
+        .
+      </p>
+      <button type="submit" class="form__btn">Принять участие </button>
+    </div>
+
+    <p class="form__footer-text">
+      А пока вы можете подготовить одноминутное видео-визитку о себе. Инструкция
+      <a class="form__footer-link" href="#">тут</a>
+      . Пример видео визитки можете посмотреть
+      <a class="form__footer-link" href="#">тут</a>
+      .
+    </p>
+  </div>
+
+</form>
   </main>
 
   <!-- Footer -->

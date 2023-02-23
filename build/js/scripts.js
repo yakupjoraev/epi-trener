@@ -1,6 +1,22 @@
 // Custom Scripts
 // Custom scripts
 
+//плавный скролл
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const blockID = anchor.getAttribute('href').substr(1)
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+};
+
 // Мобильное меню бургер
 function burgerMenu() {
   const burger = document.querySelector('.burger')
@@ -52,5 +68,51 @@ function fixedNav() {
     nav.classList.remove('fixed__nav')
   }
 }
-window.addEventListener('scroll', fixedNav)
+window.addEventListener('scroll', fixedNav);
+
+
+
+// timer
+let days = document.getElementById('days');
+let hours = document.getElementById('hours');
+let minutes = document.getElementById('minutes');
+let seconds = document.getElementById('seconds');
+
+let dd = document.getElementById('dd');
+let hh = document.getElementById('hh');
+let mm = document.getElementById('mm');
+let ss = document.getElementById('ss');
+
+let countdown = document.getElementById("countdown");
+
+let x = setInterval(function () {
+  let deadline = new Date(2023, 02, 10);
+  let now = new Date().getTime();
+  let distance = deadline - now;
+
+  // time calculation
+  let d = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let s = Math.floor((distance % (1000 * 60)) / (1000));
+
+  // output the result
+  days.innerHTML = d + "<br><span>Дней</span>";
+  hours.innerHTML = h + "<br><span>часов</span>";
+  minutes.innerHTML = m + "<br><span>минут</span>";
+  seconds.innerHTML = s + "<br><span>секунд</span>";
+
+  // animate stroke
+  // 14 дней поставил так как на макете так
+  dd.style.strokeDashoffset = 440 - (440 * d) / 14;
+  hh.style.strokeDashoffset = 440 - (440 * h) / 24;
+  mm.style.strokeDashoffset = 440 - (440 * m) / 60;
+  ss.style.strokeDashoffset = 440 - (440 * s) / 60;
+
+  // if countdown is over, change the innerText of .text
+  if (distance < 0) {
+    document.querySelector('.timer__title').innerText = `Приём закончилась.`;
+  }
+}, 1000);
+
 

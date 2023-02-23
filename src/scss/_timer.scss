@@ -1,0 +1,93 @@
+.timer {
+  padding: 20px 0 70px;
+}
+
+.timer__inner {}
+
+.timer__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.timer__descr {
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: center;
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.timer__countdown {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+
+  @media (max-width: $breakpoint768) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+.timer__countdown .timer__circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $breakpoint480) {
+    transform: scale(0.8);
+  }
+}
+
+.timer__countdown .timer__circle svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+
+
+}
+
+.timer__countdown .timer__circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 8;
+  stroke: #dddbdb;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+.timer__countdown .circle svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.timer__countdown div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 0.5em;
+}
+
+.timer__countdown div span {
+  font-size: 0.35em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

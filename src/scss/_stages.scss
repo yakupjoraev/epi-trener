@@ -1,0 +1,95 @@
+.stages {
+  padding-bottom: 120px;
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 60px;
+  }
+
+  // .stages__title
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  // .stages__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .stages__item
+
+  &__item {
+    position: relative;
+    display: grid;
+    align-content: baseline;
+    min-height: 306px;
+    padding: 40px;
+    background-color: var(--blue-color);
+    background-image: url('../img/vantages-item-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+
+    @media (max-width: $breakpoint768) {
+      padding: 20px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      min-height: 406px;
+      background-size: contain;
+    }
+  }
+
+  // .stages__item-title
+
+  &__item-title {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  // .stages__item-descr
+
+  &__item-descr {
+    max-width: 335px;
+    font-size: 18px;
+    line-height: 23px;
+
+    span {
+      color: var(--yellow-color);
+    }
+
+    &+.stages__item-descr {
+      margin-top: 15px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 250px;
+    }
+  }
+
+  // .stages__item-img
+
+  &__item-img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    @media (max-width: $breakpoint768) {
+      right: 0;
+    }
+
+    @media (max-width: $breakpoint480) {
+      top: auto;
+      bottom: 5%;
+    }
+  }
+}

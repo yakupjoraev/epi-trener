@@ -20,7 +20,22 @@
   // .hero__title
 
   &__title {
+    position: relative;
     max-width: 595px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 150px;
+      left: -50px;
+      width: 70px;
+      height: 70px;
+      background-image: url('../img/hero-bullet.png');
+
+      @media (max-width: $breakpoint992) {
+        top: 100px;
+      }
+    }
 
     @media (max-width: $breakpoint768) {
       width: 100%;

@@ -53,7 +53,24 @@
 
   // .philosophy__title
 
-  &__title {}
+  &__title {
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50px;
+      width: 70px;
+      height: 70px;
+      background-image: url('../img/hero-bullet.png');
+
+      @media (max-width: $breakpoint992) {
+        top: 0;
+      }
+    }
+  }
 
   // .philosophy__texts
 
