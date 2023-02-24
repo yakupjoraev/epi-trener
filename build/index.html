@@ -14,6 +14,8 @@
   <meta name="theme-color" content="#ffffff">
   <title>Регистрация на конкурс
     “Стать Эпи-тренером”</title>
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/graph-modal.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -42,7 +44,7 @@
   <main class="main">
     <section class="hero">
   <div class="container">
-    <div class="hero__inner">
+    <div data-aos="fade-up" class="hero__inner">
       <h1 class="hero__title main-title">
         Регистрация на конкурс
         “Стать Эпи-тренером”
@@ -54,12 +56,12 @@
         <span>В целом</span>, конечно, перспективное планирование играет определяющее значение для форм воздействия.
       </p>
 
-      <a class="hero__whu" href="#">Кто такой Эпи-тренер?</a>
+      <a class="hero__whu" href="#leader">Кто такой Эпи-тренер?</a>
 
       <div class="hero__logos">
-        <a class="hero__logo" href="#">
+        <a class="hero__logo" target="_blank" href="https://epica-professional.com/">
           <img class="hero__logo-img" src="./img/hero-logo-1.png" alt="“Epica Professional”"></a>
-        <a class="hero__logo" href="#">
+        <a class="hero__logo" target="_blank" href="https://1-mok.mskobr.ru/">
           <img class="hero__logo-img" src="./img/hero-logo-2.png"
             alt="“Первый Московский Образовательный Комплекс”"></a>
       </div>
@@ -73,9 +75,9 @@
     <section class="philosophy">
   <div class="container">
     <div class="philosophy__inner">
-      <img class="philosophy__img" src="./img/philosophy-img.png" alt="Философия бренда">
+      <img data-aos="fade-right" class="philosophy__img" src="./img/philosophy-img.png" alt="Философия бренда">
 
-      <div class="philosophy__info">
+      <div data-aos="fade-left" class="philosophy__info">
         <h2 class="philosophy__title main-title">
           Философия бренда
         </h2>
@@ -107,7 +109,7 @@
 </section>
     <section class="leader" id="leader">
   <div class="container">
-    <div class="leader__main">
+    <div data-aos="fade-right" class="leader__main">
       <div class="leader__info">
         <h3 class="leader__title main-title">
           Кто такой Эпи-Тренер
@@ -138,20 +140,20 @@
       <!-- <img class="leader__img-map" src="./img/we-map.png" alt="Карта России"> -->
     </div>
 
-    <div class="leader__footer">
+    <div data-aos="fade-up" class="leader__footer">
       <div class="leader__view">
-        <a class="leader__download hero__whu" href="#">
+        <a class="leader__download hero__whu" href="proverka.docx" download>
           Скачать презентацию
         </a>
 
-        <a class="leader__link" href="#">
-          <div class="leader__link-play"></div>
+        <div class="leader__link">
+          <a href="#" class="leader__link-play" data-graph-path="youtube"></a>
 
           <div class="leader__link-texts">
             <p class="leader__link-text">Посмотрите видео</p>
             <p class="leader__link-text leader__link-text--yellow">Кто такой Эпи-тренер</p>
           </div>
-        </a>
+        </div>
       </div>
 
       <img class="leader__footer-img" src="./img/leader-women.png"
@@ -166,7 +168,7 @@
     </h3>
 
     <ul class="stages__list">
-      <li class="stages__item">
+      <li data-aos="fade-up-right" class="stages__item">
         <h4 class="stages__item-title">
           Оставьте заявку
         </h4>
@@ -182,7 +184,7 @@
         <img class="stages__item-img" src="./img/sova-s-pismom.png" alt="sova-s-pismom">
       </li>
 
-      <li class="stages__item">
+      <li data-aos="fade-up-left" class="stages__item">
         <h4 class="stages__item-title">
           Пройти обучение
         </h4>
@@ -199,7 +201,7 @@
         <img class="stages__item-img" src="./img/videoplenka.png" alt="videoplenka">
       </li>
 
-      <li class="stages__item">
+      <li data-aos="fade-up-right" class="stages__item">
         <h4 class="stages__item-title">
           Тестирование
         </h4>
@@ -219,7 +221,7 @@
         <img class="stages__item-img" src="./img/notebook.png" alt="notebook">
       </li>
 
-      <li class="stages__item">
+      <li data-aos="fade-up-left" class="stages__item">
         <h4 class="stages__item-title">
           Выбор победителя
         </h4>
@@ -240,7 +242,7 @@
     <section class="prizes" id="prizes">
   <div class="container">
     <div class="prizes__inner">
-      <div class="prizes__info">
+      <div data-aos="fade-up-right" class="prizes__info">
         <h3 class="prizes__title main-title">
           Призы за участие
         </h3>
@@ -266,7 +268,7 @@
         </div>
       </div>
 
-      <ul class="prizes__list">
+      <ul data-aos="fade-up-left" class="prizes__list">
         <li class="prizes__item">
           <h4 class="prizes__item-title">
             Эпи-тренер
@@ -318,7 +320,7 @@
 </section>
     <section class="timer" id="timer">
   <div class="container">
-    <div class="timer__inner">
+    <div data-aos="fade-up" class="timer__inner">
       <h3 class="timer__title main-title">Оформить заявку на участие</h3>
       <p class="timer__descr">Старт приёма заявок через:</p>
       <div class="timer__countdown" id="countdown">
@@ -419,6 +421,20 @@
   </div>
 
 </form>
+    <!-- Modal -->
+<div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="youtube">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+
+      <iframe class="youtube__iframe" width="560" height="315"
+        src="https://www.youtube.com/embed/5_24j21fNPE?enablejsapi=1" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
   </main>
 
   <!-- Footer -->
@@ -438,6 +454,8 @@
 
 </body>
 
+<script src="./js/aos.js"></script>
+<script src="./js/graph-modal.min.js"></script>
 <script src="./js/scripts.min.js"></script>
 
 </html>

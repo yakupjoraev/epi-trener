@@ -172,6 +172,21 @@ html {
   }
 }
 
+.graph-modal__close {
+  top: -40px;
+  background-image: url("../img/cancel.svg");
+}
+
+.graph-modal__container {
+  padding: 0;
+  height: 600px;
+}
+
+.youtube__iframe {
+  width: 100%;
+  height: 600px;
+}
+
 .header {
   position: relative;
   z-index: 30;
@@ -263,6 +278,7 @@ html {
   background-image: url("../img/hero-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .hero__title {
@@ -494,6 +510,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 75px;
   width: 75px;
   height: 75px;
   margin-right: 20px;
@@ -512,6 +529,8 @@ html {
   -o-transition: box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
+  -webkit-animation: pulse 1500ms infinite;
+          animation: pulse 1500ms infinite;
 }
 
 .leader__link-play:hover {
@@ -551,6 +570,30 @@ html {
   position: absolute;
   right: 20px;
   bottom: 0;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #fbb32f;
+            box-shadow: 0 0 0 0 #fbb32f;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 17px #fbb32f01;
+            box-shadow: 0 0 0 17px #fbb32f01;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #fbb32f;
+            box-shadow: 0 0 0 0 #fbb32f;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 17px #fbb32f01;
+            box-shadow: 0 0 0 17px #fbb32f01;
+  }
 }
 
 .stages {
@@ -1097,6 +1140,14 @@ html {
     line-height: 42px;
   }
 
+  .graph-modal__container {
+    height: 500px;
+  }
+
+  .youtube__iframe {
+    height: 500px;
+  }
+
   .menu__item-link:hover::before {
     content: none;
   }
@@ -1332,6 +1383,14 @@ html {
     line-height: 32px;
   }
 
+  .graph-modal__container {
+    height: 350px;
+  }
+
+  .youtube__iframe {
+    height: 350px;
+  }
+
   .hero {
     padding: 150px 0 50px;
     background: none;
@@ -1463,6 +1522,14 @@ html {
 }
 
 @media (max-width: 479.98px) {
+  .graph-modal__container {
+    height: 200px;
+  }
+
+  .youtube__iframe {
+    height: 200px;
+  }
+
   .hero__logos {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

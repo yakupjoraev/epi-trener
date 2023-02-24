@@ -70,7 +70,27 @@ function fixedNav() {
 }
 window.addEventListener('scroll', fixedNav);
 
+AOS.init();
+const modal = new GraphModal();
 
+var customStopVideo = () => {
+  var iframe = document.querySelectorAll('iframe');
+  Array.prototype.forEach.call(iframe, iframe => {
+    iframe.contentWindow.postMessage(JSON.stringify({
+      event: 'command',
+      func: 'stopVideo'
+    }), '*');
+  });
+}
+
+
+document.querySelector(".graph-modal__close").onclick = function () {
+  customStopVideo();
+};
+
+document.querySelector(".graph-modal").onclick = function () {
+  customStopVideo();
+};
 
 // timer
 let days = document.getElementById('days');

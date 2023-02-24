@@ -3,6 +3,7 @@
   background-image: url('../img/hero-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   @media (max-width: $breakpoint1450) {
     background-position: center;
